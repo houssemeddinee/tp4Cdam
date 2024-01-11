@@ -14,5 +14,8 @@ exports.getPost = async (req, res) => {
     const post = await Post.find({});
 
 
-    res.json({ status: true, message: post });
+    res.json({
+        "message": "",
+        "code": 200, data: post
+    });
 };
