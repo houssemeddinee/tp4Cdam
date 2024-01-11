@@ -11,9 +11,8 @@ const postSchema = new mongoose.Schema({
   },
   userId: {
     type: String,
-
-
   },
+
   offerImage: {
     type: String,
 

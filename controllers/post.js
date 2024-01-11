@@ -1,12 +1,12 @@
 const Post = require('../models/post');
 
 exports.addPost = async (req, res) => {
-    const { offerId, userId, offerImage, offerName, offerDateCreated } = req.body;
+    const { offerId, userId, offerImage, offerName, offerStartDate, offerDesc, offerPrice, offerQuantity, offerEndDate } = req.body;
     const post = new Post(
-        { offerId, userId, offerImage, offerName, offerDateCreated });
+        { offerId, userId, offerImage, offerName, offerStartDate, offerDesc, offerPrice, offerQuantity, offerEndDate });
 
     await post.save();
-    res.json({ status: true, message: 'get List test ' });
+    res.json({ status: true, message: 'add List test ' });
 };
 
 exports.getPost = async (req, res) => {
