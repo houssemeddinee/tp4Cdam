@@ -6,7 +6,7 @@ exports.addPost = async (req, res) => {
         { offerId, userId, offerImage, offerName, offerStartDate, offerDesc, offerPrice, offerQuantity, offerEndDate });
 
     await post.save();
-    res.json({ status: true, message: 'add List test ' });
+    res.json({ status: true, message: 'add List test ', data: post });
 };
 
 exports.getPost = async (req, res) => {
